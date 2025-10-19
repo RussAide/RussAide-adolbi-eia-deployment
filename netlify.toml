@@ -1,0 +1,16 @@
+[build]
+  command = "cd client && pnpm install && pnpm run build"
+  publish = "client/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Note: This is frontend-only deployment
+# Backend API functionality will not work
+# You'll need to deploy the backend separately or use Railway for full-stack
+
