@@ -78,9 +78,7 @@ export default function Clients() {
       overdueAppointments: 5,
       authorizationsExpiring: 8,
     });
-  }, [setContext]);
-
-
+    }, []);
   const getRiskBadgeColor = (risk: string) => {
     switch (risk) {
       case "low":
