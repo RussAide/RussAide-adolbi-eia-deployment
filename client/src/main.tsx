@@ -53,6 +53,8 @@ const trpcClient = trpc.createClient({
   ],
 });
 
+console.log("🧪 ENV:", import.meta.env.VITE_APP_ID, import.meta.env.VITE_OAUTH_SERVER_URL);
+
 createRoot(document.getElementById("root")!).render(
   <trpc.Provider client={trpcClient} queryClient={queryClient}>
     <QueryClientProvider client={queryClient}>
